@@ -1,0 +1,47 @@
+<h1>Making HTTP Calls</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <form class="form-horizontal">
+          <!-- <div class="container">
+            <div class="row">                 -->
+                    <div class="col-md-6">          
+                        <!-- <div class="container">
+                            <div class="row">                 -->
+                                           
+                                    <table class="table table-stripped">
+                                      <tr>
+                                        <th>UserId</th>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Body</th>
+                                      </tr>
+                                      <!-- (click)="DetailData(i);" -->
+                                      <tr *ngFor="let user of users;let i = index"  (click)="DetailData(i);" routerLink="/detail/{{user.id}}">
+                                        <td>{{user.userId}}</td>
+                                        <td>{{user.id}}</td>
+                                        <td>{{user.title}}</td>
+                                        <td>{{user.body}}</td>
+                                      </tr>
+                                    </table>  
+                                
+                            <!-- </div>
+                       </div>               -->
+                    </div>
+                    <div class="col-md-3" ngModelGroup="submitsection">
+                        <button type="submit" class="btn btn-success" (click)="FetchData1();">GetRecords</button>
+                        <button type="submit" class="btn btn-success" (click)="FetchData2();">GetORecords</button>
+                        <button type="reset" class="btn btn-default" (click)="clearData();">Clear</button>
+                    </div>
+                    <div class="col-md-3">  <!--*ngIf="(users1)?.length-->
+                        <h5>UserId: {{users1.userId}}</h5><br>
+                        <h5>Id: {{users1.id}}</h5><br>
+                        <h5>Title:{{users1.title}}</h5><br>
+                        <h5>Body: {{users1.body}}</h5><br>
+                    </div>                   
+              <!-- </div>
+          </div> -->
+          </form>
+    </div>
+  </div>
+</div>
